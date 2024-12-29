@@ -48,7 +48,7 @@ public class PlayerHealthController : MonoBehaviour
             // Decrease player health by a fixed amount 
             playerHealth -= 10;
 
-            // Optionally, display the current health
+            // Display the current health
             Debug.Log("Player health: " + playerHealth);
         }
     }
