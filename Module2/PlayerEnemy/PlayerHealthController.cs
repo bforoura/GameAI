@@ -45,7 +45,7 @@ public class PlayerHealthController : MonoBehaviour
             // Log a message when colliding with an enemy
             Debug.Log("Player has collided with the enemy!");
 
-            // Decrease player health by a fixed amount (e.g., 10)
+            // Decrease player health by a fixed amount 
             playerHealth -= 10;
 
             // Optionally, display the current health
