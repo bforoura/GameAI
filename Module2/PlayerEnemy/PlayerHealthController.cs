@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthController : MonoBehaviour
 {
@@ -33,7 +35,9 @@ public class PlayerHealthController : MonoBehaviour
         if (playerHealth <= 0)
         {
             Debug.Log("Game over: The Player is dead!");
-            Destroy(gameObject); // Destroy the player object
+            // Destroy(gameObject); // Destroy the player object
+
+            QuitGame();
         }
     }
 
@@ -42,15 +46,41 @@ public class PlayerHealthController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            // Log a message when colliding with the enemy
+            // Log a message when colliding with an enemy
             Debug.Log("Player has collided with the enemy!");
 
-            // Decrease player health by a fixed amount 
+            // Decrease player health by a fixed amount (e.g., 10)
             playerHealth -= 10;
 
-            // Display the current health
+            // Optionally, display the current health
             Debug.Log("Player health: " + playerHealth);
         }
     }
+
+
+    void QuitGame()
+    {
+        // The hash symbols (#) in the code are part of preprocessor directives in C#. 
+        // These are used to instruct the compiler to conditionally compile (or exclude) 
+        // part of code based on certain conditions.
+        
+        // Quit the game
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;  // Stop play mode in the editor
+        #else
+            Application.Quit();  // Quit the game in a build
+        #endif
+    }
+
+
+
+    void RestartGame()
+    {
+        // Reload the current scene to restart the game
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        Time.timeScale = 1;  // Resume the game
+    }
+
 }
 
