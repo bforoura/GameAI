@@ -42,7 +42,7 @@ public class PlayerHealthController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            // Log a message when colliding with an enemy
+            // Log a message when colliding with the enemy
             Debug.Log("Player has collided with the enemy!");
 
             // Decrease player health by a fixed amount 
