@@ -1,10 +1,18 @@
 Game Versions:
 
 Version 1:
--- PlayerController.cs and EnemyController.cs
+  -- PlayerController.cs
+  -- EnemyController.cs
 
 Version 2:
--- PlayerController.cs and EnemyPatrolController.cs
+  -- PlayerController.cs
+  -- EnemyPatrolController.cs
 
 Version 3:
--- PlayerHealthController.cs and EnemyPatrolController.cs
+  -- PlayerHealthController.cs
+  -- EnemyPatrolController.cs
+
+Version 4:
+   -- PlayerHealthController.cs
+   -- EnemyPatrolController.cs
+   -- GameController.cs
