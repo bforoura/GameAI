@@ -33,7 +33,7 @@ public class CreateWalls : MonoBehaviour
         CreateVerticalWalls();
     }
 
-    // Make this public to allow access from GameWithBoundary
+    // Make this public to allow access 
     
     public void CreateVerticalWalls()
     {
