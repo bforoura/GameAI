@@ -1,8 +1,8 @@
 Game Versions:
 
 Version 1:
-  -- PlayerController.cs
-  -- EnemyController.cs
+  -- PlayerController.cs (attached to Player)
+  -- EnemyController.cs (attached to Enemy)
 
 Version 2:
   -- PlayerController.cs
@@ -15,4 +15,10 @@ Version 3:
 Version 4:
    -- PlayerHealthController.cs
    -- EnemyPatrolController.cs
+   -- GameController.cs (attached to GameController)
+
+Version 5:
+   -- PlayerHealthController.cs
+   -- EnemyPatrolController.cs
    -- GameController.cs
+   -- CreateWalls.cs (attached to WallManager)
