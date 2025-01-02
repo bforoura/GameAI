@@ -21,4 +21,5 @@ Version 5:
    -- PlayerHealthController.cs
    -- EnemyPatrolController.cs
    -- GameController.cs
+   -- CameraController.cs (attached to Main Camera)
    -- CreateWalls.cs (attached to WallManager)
