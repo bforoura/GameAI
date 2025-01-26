@@ -1,1 +1,17 @@
+// GameObject declarations:
+GameObject gameObject;                          // private variable
+public GameObject gameObject;                  // public variable (visible in Inspector)
+[SerializeField] private GameObject gameObject; // private but visible in Inspector
 
+
+// Finding game objects:
+gameObject = GameObject.Find("Sphere");                         // find by name
+Rigidbody rb = gameObject.GetComponent<Rigidbody>();            // get Rigidbody
+SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();  // get SpriteRenderer
+
+
+gameObject = GameObject.FindWithTag("Player");                  // find first by tag
+GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Player"); // find all by tag
+
+
+gameManager = FindObjectOfType<GameManager>();                  // find by component type
