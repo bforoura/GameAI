@@ -1,0 +1,49 @@
+How to Set Up the Scene
+=======================
+Step 1: Create the Coin Prefab
+-- Drag the coin model into the Assets folder to create a prefab of the coin.
+-- Make sure it has a collider (rigidbody is optional if you want to use physics)
+
+
+Step 2: Create the SpawnPoints Parent Object and Spawn Points
+-- In the Hierarchy, right-click and select Create Empty. Name it SpawnPoints.
+   This object will serve as the parent for all your spawn point GameObjects.
+-- Inside the SpawnPoints object, create 10 empty GameObjects. To do this, right-click on 
+-- pawnPoints and choose Create Empty for each spawn point.
+-- Rename them to SP1, SP2, SP3, ..., up to SP10.
+-- Position each of the spawn point objects where you want the coins to spawn in the Scene.
+-- Ensure all the SP objects (like SP1, SP2, etc.) are children of the SpawnPoints parent object. 
+   You should see all the spawn points indented under SpawnPoints in the Hierarchy.
+
+
+
+Step 3: Set Up the GameManager6 Script
+-- In the Hierarchy, right-click and choose Create Empty to create a new GameObject. 
+   Name it GameManager.
+-- Attach the GameManager6 Script:
+
+
+Step 4: Set References in the Inspector
+-- Select the GameManager object in the Hierarchy.
+-- In the Inspector, you will see the GameManager6 script component with three fields: 
+    coinsToCollect, coinPrefab, and spawnPoints
+    
+-- Drag your coin prefab from the Assets window to the coinPrefab field.
+-- Set the size of the spawnPoints array to 10 
+-- For each slot in the spawnPoints array, drag and drop each spawn point child 
+   (e.g., SP1, SP2, SP3, ..., SP10) 
+   from the Hierarchy into the corresponding slot in the array in the Inspector.
+   
+
+Note
+====
+If you wish, you can avoid the dragging and dropping of SP's in GameManager6.cs:
+
+Void Start()
+    {
+        // Automatically find all child spawn points under the SpawnPoints parent object
+        spawnPoints = GameObject.Find("SpawnPoints").GetComponentsInChildren<Transform>();
+
+        // Spawn coins at the spawn points before the game starts
+        SpawnCoins();
+    }
