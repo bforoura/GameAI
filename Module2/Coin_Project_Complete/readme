@@ -1,1 +1,11 @@
+Two ways to import a custom package:
 
+(1) Import a project folder which contains the following sub-folders:
+    -- Assets
+    -- Packages
+    -- ProjectSettings
+    -- UserSettings
+
+
+2) Unity Assets / Import Package/ Custom Package  the .unitypackage file which was exported using the option:
+   Unity / Assets / Export Package
