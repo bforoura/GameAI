@@ -11,15 +11,17 @@ Version 2:
 Version 3:
   -- PlayerHealthController.cs
   -- EnemyPatrolController.cs
+  -- GameController.cs (attached to GameController)
 
 Version 4:
    -- PlayerHealthController.cs
    -- EnemyPatrolController.cs
-   -- GameController.cs (attached to GameController)
+   -- GameController.cs 
+   -- CameraController.cs (attached to Main Camera)
 
 Version 5:
    -- PlayerHealthController.cs
    -- EnemyPatrolController.cs
    -- GameController.cs
-   -- CameraController.cs (attached to Main Camera)
+   -- CameraController.cs 
    -- CreateWalls.cs (attached to WallManager)
