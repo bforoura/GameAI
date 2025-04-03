@@ -44,6 +44,18 @@ public class SummonChompersAction : GOAction
         // The 100f is the radius of this detection zone
         // The LayerMask (1 << packLayer) filters out any non-Chomper objects by checking if they are in the "Pack" layer
         
+        // Explanation:
+        //    Total Layers: 32 (numbered 0 to 31)
+        //    Bitmask for Layer 3: 00000000000000000000000000001000 (binary representation of 8)
+        //    In this bitmask:
+        //         Bits at positions 0, 1, 2, and 4 to 31 are set to 0, excluding layers 0, 1, 2, and all layers above 3.
+        
+        // Example:
+        //    int layer0 = 1 << 0;      layer 0
+        //    int layer2 = 1 << 2;      layer 2
+        //    int layer4 = 1 << 4;      layer 4
+        //    int combinedMask = layer0 | layer2 | layer4;     Combine all the layers
+        
         int packLayer = LayerMask.NameToLayer("Pack"); // Get the "Pack" layer index
         Collider[] chompersInRange = Physics.OverlapSphere(ellenTransform.position, 100f, 1 << packLayer);
 
