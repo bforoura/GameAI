@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a7c8ca992f915438a96c2077353778, type: 3}
+  m_Name: wander5
+  m_EditorClassIdentifier: 
+  brickName: Assets/BT/wander5.asset
+  xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
+    version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
+    id=\"0\" guid=\"5d6873316d76f3049bd88ca6e5e6a011\" nextId=\"11\">\r\n      <root>\r\n       
+    <SelectorNode id=\"1\" />\r\n      </root>\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"ellenPosition\" type=\"UnityEngine.Transform\"
+    isBlackboard=\"False\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </BehaviorTree>\r\n    <SelectorNode
+    id=\"1\">\r\n      <children>\r\n        <elem>\r\n          <ActionNode id=\"10\"
+    />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </SelectorNode>\r\n    <ActionNode
+    id=\"10\" action=\"Chomper/SummonChompers\">\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"ellenPosition\" type=\"UnityEngine.Transform\"
+    isBlackboard=\"True\" blackboard=\"ellenPosition\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n 
+    </runtimeInfo>\r\n  <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"wander5\"
+    _description=\"\" _removeIfClosed=\"False\">\r\n      <_rootList>\r\n       
+    <elem>\r\n          <SelectorNode id=\"1\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ActionNode id=\"10\" />\r\n        </elem>\r\n      </_rootList>\r\n      <_nodes>\r\n       
+    <nodes>\r\n          <SelectorNode id=\"1\" />\r\n          <ActionNode id=\"10\"
+    />\r\n        </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n    <SelectorNode
+    id=\"1\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"519.8335 252.8333\" name=\"Selector\" description=\"Executes all its
+    children until one of them is successful\" cardinality=\"-1\" hasParent=\"False\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <SelectorNode id=\"1\" />\r\n        </data>\r\n     
+    </_data>\r\n    </SelectorNode>\r\n    <ActionNode id=\"10\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"True\" position=\"462.4999 473.3333\" name=\"Chomper/SummonChompers\"
+    description=\"Summons all Chompers in the pack to continuously follow Ellen.\"
+    cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <ActionNode id=\"10\" />\r\n          <SelectorNode id=\"1\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+  zoom: 0.8
+  subslist:
+  - {fileID: 11400000, guid: bb6eca8c49d6b0448b6074b27ff062b9, type: 2}
+  - {fileID: 11400000, guid: 4382503fd7ea0c54c848b461ab332c1d, type: 2}
+  _guid: 5d6873316d76f3049bd88ca6e5e6a011
